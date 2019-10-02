@@ -1,0 +1,21 @@
+<form action="/pizza-orders/<%= @order.id %>" method="post">
+  <label for="first-name">First Name</label>
+  <input type="text" name="first_name" id="first-name" value=<%= @order.first_name() %>>
+
+<!-- value="#@order['first_name'] %> "> -->
+
+  <label for="last-name">Last Name</label>
+  <input type="text" name="last_name" id="last-name" value=<%= @order.last_name() %>>
+
+  <label for="pizza-select">Select a pizza:</label>
+  <select id="pizza-select" name="topping">
+    <!-- Try fguring out how to use 'selected' property for html -->
+    <option value="Pepperoni">Pepperoni</option>
+    <option value="Italian Sausage">Italian Sausage</option>
+  </select>
+
+  <label for="quantity">Quantity:</label>
+  <input type="number" name="quantity" id="quantity" value=<%= @order.quantity()%>>
+
+  <input type="submit" value="Order Pizza">
+</form>
